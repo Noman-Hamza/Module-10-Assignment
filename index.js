@@ -38,22 +38,19 @@ console.log(result2);
 //Q--3
 
 
-function findMin(){
-
-    let num10 = [20, 50, 40, 60, 10, 90];
-
-    let result3 = num10.find(function (value){
-        return value < 100;
-
-
-    })
-
-    console.log(result3);
-
+let numbers20 = [20, 50, 40, 60, 10, 90];
+function findMin(num10) {
+    let min = num10[0];
+    for (let i = 1; i < num10.length; i++) {
+        if (num10[i] < min) {
+            min = num10[i];
+        }
+    }
+    return min;
 }
 
-findMin()
 
+console.log(findMin(numbers20));
 
 //Q--3--End//
 
@@ -151,3 +148,7 @@ findAverage();
 
 
 console.log(array);
+
+
+
+
