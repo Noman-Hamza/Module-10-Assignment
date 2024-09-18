@@ -112,7 +112,7 @@ console.log(country);
 
 let exampleString = "Hello, World!";
 
-function getVowels() {
+function countVowels() {
     const vowels = 'aeiouAEIOU';
 
 
@@ -122,7 +122,7 @@ function getVowels() {
 }
 
 
-getVowels();
+countVowels();
 
 console.log(exampleString);
 
