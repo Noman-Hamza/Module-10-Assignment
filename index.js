@@ -12,10 +12,7 @@ function calculateDifference(a, b) {
     return num1 - num2;
 }
 
-
-let result = calculateDifference(10, 5);
-console.log(result);
-
+console.log(calculateDifference(10,5))
 
 //Q--1--END//
 
@@ -30,8 +27,8 @@ function isOdd(value) {
     }
 }
 
-let result2 = isOdd(9);
-console.log(result2);
+
+console.log(isOdd(9))
 
 //Q--2--END//
 
@@ -60,7 +57,6 @@ console.log(findMin(numbers20));
 
 
 const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-const evenNumbers = filterEvenNumbers(numbers);
 
 function filterEvenNumbers(numbers) {
     return numbers.filter(function(number) {
@@ -68,8 +64,7 @@ function filterEvenNumbers(numbers) {
     });
 }
 
-console.log(evenNumbers);
-
+console.log(filterEvenNumbers(numbers));
 
 //Q--4---End//
 
@@ -77,18 +72,18 @@ console.log(evenNumbers);
 //Q--5---start//
 
 const shortArray = [20, 50, 40, 60, 10, 90];
-const descendingArray = sortArrayDescending(shortArray);
 
-function sortArrayDescending(shortArray){
-
-    return shortArray.sort(function(a, b) {
+function sortArrayDescending(array) {
+    return array.sort(function(a, b) {
         return b - a;
     });
 }
 
-console.log(descendingArray);
+console.log(sortArrayDescending(shortArray));
 
-//Q--5--End //
+// Q--5--End
+
+
 
 
 //Q--6--start//
@@ -96,37 +91,27 @@ console.log(descendingArray);
 
 let country = "Bangladesh";
 
-function lowercaseFirstLetter() {
-    country = country[0].toLowerCase() + country.slice(1);
+function lowercaseFirstLetter(string) {
+    return string[0].toLowerCase() + string.slice(1);
 }
 
-lowercaseFirstLetter();
+console.log(lowercaseFirstLetter(country));
 
-console.log(country);
-
-
-//Q--6--End--//
 
 
 ///Q--7--Start--//
 
 let exampleString = "Hello, World!";
 
-function countVowels() {
+function countVowels(string) {
     const vowels = 'aeiouAEIOU';
 
-
-    exampleString = Array.from(exampleString)
+    return Array.from(string)
         .filter(char => vowels.includes(char))
         .join('');
 }
 
-
-countVowels();
-
-console.log(exampleString);
-
-
+console.log(countVowels(exampleString));
 
 ////Q--7---End---//
 
@@ -136,19 +121,10 @@ console.log(exampleString);
 
 let array = [10, 20, 30, 40, 50];
 
-function findAverage() {
-
-    array = array.length === 0
+function findAverage(array) {
+    return array.length === 0
         ? 0
         : array.reduce((sum, number) => sum + number, 0) / array.length;
 }
 
-
-findAverage();
-
-
-console.log(array);
-
-
-
-
+console.log(findAverage(array));
